@@ -127,16 +127,21 @@ export default function HomePage() {
                 dari kekayaan alam Indonesia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#2e5844] hover:bg-[#2e5844]/90 text-white">
+                <Button
+                  className="bg-[#2e5844] hover:bg-[#2e5844]/90 text-white"
+                  onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
+                >
                   Lihat Produk Kami
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#2e5844] text-[#2e5844] hover:bg-[#2e5844] hover:text-white"
-                >
-                  Hubungi Kami
-                </Button>
+<Button
+  variant="outline"
+  className="border-[#2e5844] text-[#2e5844] hover:bg-[#2e5844] hover:text-white"
+  onClick={() => window.open("https://wa.me/6285736654927", "_blank")}
+>
+  Hubungi Kami
+</Button>
+
               </div>
             </div>
             <div className="relative">
@@ -334,7 +339,7 @@ export default function HomePage() {
             <div className="relative group">
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=200&width=300"
+                  src="/foto2.jpg?height=200&width=300"
                   alt="Briket Arang Premium"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -350,7 +355,7 @@ export default function HomePage() {
             <div className="relative group">
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=200&width=300"
+                  src="/foto1.jpg?height=200&width=300"
                   alt="Proses Produksi Briket"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -367,14 +372,14 @@ export default function HomePage() {
             <div className="relative group">
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=200&width=300"
+                  src="/foto3.jpg?height=200&width=300"
                   alt="Rempah-rempah Premium"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                   <Badge className="bg-[#2e5844] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Rempah Premium
+                    Proses Packing
                   </Badge>
                 </div>
               </div>
@@ -383,80 +388,14 @@ export default function HomePage() {
             <div className="relative group">
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=200&width=300"
+                  src="/foto4.jpg?height=200&width=300"
                   alt="Kemasan Rempah Export"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                   <Badge className="bg-[#2e5844] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Kemasan Export
-                  </Badge>
-                </div>
-              </div>
-            </div>
-
-            {/* Tembakau Cerutu Gallery */}
-            <div className="relative group">
-              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Daun Tembakau Premium"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                  <Badge className="bg-[#2e5844] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Daun Tembakau
-                  </Badge>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Proses Fermentasi"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                  <Badge className="bg-[#2e5844] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Fermentasi
-                  </Badge>
-                </div>
-              </div>
-            </div>
-
-            {/* Fasilitas Gallery */}
-            <div className="relative group">
-              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Gudang Penyimpanan"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                  <Badge className="bg-[#2e5844] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Gudang Modern
-                  </Badge>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Quality Control"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                  <Badge className="bg-[#2e5844] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Quality Control
+                    Pengiriman
                   </Badge>
                 </div>
               </div>
@@ -497,18 +436,18 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h4 className="text-2xl font-bold text-[#2e5844] mb-6">PT Masura Indo Perkasa</h4>
+              <h4 className="text-2xl font-bold text-[#2e5844] mb-6">PT MASURA INDO PERKASA</h4>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <MapPin className="h-6 w-6 text-[#2e5844] mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="font-semibold text-gray-900">Alamat Kantor</h5>
                     <p className="text-gray-600">
-                      Jl. Industri Raya No. 123
+                      Jl. Nusa Indah Dusun Kertonegoro
                       <br />
-                      Kawasan Industri Terpadu
+                      Desa/Kelurahan Kertonegoro Kecamatan Jenggawah
                       <br />
-                      Jakarta Timur 13920, Indonesia
+                      Kabupaten Jember Jawa Timur 68171
                     </p>
                   </div>
                 </div>
@@ -517,8 +456,8 @@ export default function HomePage() {
                   <Phone className="h-6 w-6 text-[#2e5844] mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="font-semibold text-gray-900">Telepon</h5>
-                    <p className="text-gray-600">+62 21 8765 4321</p>
-                    <p className="text-gray-600">+62 812 3456 7890</p>
+                    <p className="text-gray-600">085736654927</p>
+                    
                   </div>
                 </div>
 
@@ -526,22 +465,12 @@ export default function HomePage() {
                   <Mail className="h-6 w-6 text-[#2e5844] mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="font-semibold text-gray-900">Email</h5>
-                    <p className="text-gray-600">info@masuraindoperkasa.com</p>
-                    <p className="text-gray-600">sales@masuraindoperkasa.com</p>
+                    <p className="text-gray-600">masuraindoperkasa@gmail.com</p>
                   </div>
                 </div>
               </div>
 
-              <Separator className="my-8" />
-
-              <div>
-                <h5 className="font-semibold text-gray-900 mb-4">Jam Operasional</h5>
-                <div className="space-y-2 text-gray-600">
-                  <p>Senin - Jumat: 08:00 - 17:00 WIB</p>
-                  <p>Sabtu: 08:00 - 12:00 WIB</p>
-                  <p>Minggu: Tutup</p>
-                </div>
-              </div>
+            
             </div>
 
             <Card className="border-0 shadow-xl">
@@ -611,7 +540,7 @@ export default function HomePage() {
                   <Image src="/logo.jpeg?height=24&width=24" alt="Logo" width={46} height={46} />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold">PT Masura Indo Perkasa</h4>
+                  <h4 className="text-xl font-bold">PT MASURA INDO PERKASA</h4>
                   <p className="text-green-200">Natural Products Excellence</p>
                 </div>
               </div>
@@ -633,9 +562,9 @@ export default function HomePage() {
             <div>
               <h5 className="font-semibold mb-4">Kontak</h5>
               <ul className="space-y-2 text-green-100">
-                <li>+62 21 8765 4321</li>
-                <li>info@masuraindoperkasa.com</li>
-                <li>Jakarta Timur, Indonesia</li>
+                <li>085736654927</li>
+                <li>masuraindoperkasa@gmail.com</li>
+                <li>Kabupaten Jember Jawa Timur</li>
               </ul>
             </div>
           </div>
@@ -643,15 +572,26 @@ export default function HomePage() {
           <Separator className="my-8 bg-green-600" />
 
           <div className="text-center text-green-100">
-            <p>&copy; 2024 PT Masura Indo Perkasa. All rights reserved.</p>
+            <p>&copy; 2025 PT MASURA INDO PERKASA. All rights reserved.</p>
           </div>
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* Floating Contact Buttons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        {/* Email Button */}
         <a
-          href="https://wa.me/6281234567890"
+          href="mailto:masuraindoperkasa@gmail.com"
+          className="flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+        >
+          <Mail className="h-6 w-6 mr-2" />
+          <span className="hidden sm:inline font-medium">Email Kami</span>
+          <span className="sm:hidden font-medium">Email</span>
+        </a>
+
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/6285736654927"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
